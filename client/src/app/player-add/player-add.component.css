@@ -4,3 +4,15 @@
     padding: 3%;
     
 }
+
+.d {
+    display: inline-block;
+}
+
+table {
+    margin-left: 30%;
+}
+
+.red {
+    color: red;
+}

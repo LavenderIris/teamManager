@@ -6,11 +6,18 @@
 <h3>Add Player</h3>
 
 <div>
+  <table>
   <form (submit)= 'onSubmit()' #formData='ngForm'>
-      Player Name: <input type="text" name='name' required minlength="3" [(ngModel)]='player.name'><br>
-      Preferred Position: <input type="text" name='position'  [(ngModel)]='player.position'> <br>
+    <tr>
+      <td>Player Name: <input type="text" name='name' required minlength="3" [(ngModel)]='player.name'> </td> 
+        <td><div class='d' *ngIf='!formData.valid' class='red'> Name needs to be at least 2 characters in length</div></td>
+    </tr>
+    <tr>
+      <td>Preferred Position: <input type="text" name='position'  [(ngModel)]='player.position'> </td>
+    </tr>
       <input [disabled]='!formData.valid' type="submit" value="ADD">
   </form>
+  </table>
 </div>
 
 
