@@ -1,0 +1,33 @@
+<p>
+  player-status works!
+</p>
+
+<a [routerLink]="['/','status','game','1']">Game 1</a> | 
+<a [routerLink]="['/','status','game','2']">Game 2</a> | 
+<a [routerLink]="['/','status','game','3']">Game 3</a> 
+
+<div class = 'border'>
+  <table class ='m-t'>
+    <thead>
+      <tr>
+        <td>Player Name</td>
+        <td>Prefered Position</td>
+        <td>Status</td>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor= 'let p of players ; let idx = index '>
+        <td> {{p.name}} </td>
+        <td>{{p.position}} </td>
+        <td> 
+            <button [ngClass] ='{green : p.status === "Playing"}' (click)='changeStatus(p._id,"Playing")' >Playing</button>
+            <button [ngClass] ='{red : p.status === "Not Playing"}' (click)='changeStatus(p._id,"Not Playing")'>Not Playing</button>
+            <button [ngClass] ='{yellow : p.status === "Undecided"}' (click)='changeStatus(p._id,"Undecided")'>Undecided</button>
+        
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<router-outlet></router-outlet>

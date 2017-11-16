@@ -1,0 +1,32 @@
+table, tr, td {
+    border: 1px solid black;
+}
+
+.m-t{
+    margin-top: 2%;
+}
+
+.border {
+    margin: 3%;
+    border: 1px black solid;
+    padding: 3%;
+    
+}
+
+table {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+  }
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.yellow {
+    background-color: yellow;
+}

@@ -1,0 +1,18 @@
+<div class = 'border'>
+
+  
+<a [routerLink]="['..','list']">List</a>
+<a [routerLink]="['..','addplayer']">Add Player</a>
+<h3>Add Player</h3>
+
+<div>
+  <form (submit)= 'onSubmit()' #formData='ngForm'>
+      Player Name: <input type="text" name='name' required minlength="3" [(ngModel)]='player.name'><br>
+      Preferred Position: <input type="text" name='position'  [(ngModel)]='player.position'> <br>
+      <input [disabled]='!formData.valid' type="submit" value="ADD">
+  </form>
+</div>
+
+
+
+<router-outlet></router-outlet>

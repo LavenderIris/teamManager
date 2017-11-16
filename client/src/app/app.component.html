@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <title>Team Manager</title>
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+
+  <a [routerLink]="['players']">Manage Player</a>
+  <a [routerLink]="['status', 'game', '1']">Manage Player Status</a>
+  <!-- <a [routerLink]="['players','list']">List</a> -->
+  <!-- <a [routerLink]="['players','addplayer']">Add Player</a> -->
+
+  <router-outlet></router-outlet>
